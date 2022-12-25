@@ -2,11 +2,11 @@
 
 
 # Run Update and Upgrade commands on system
-    sudo apk update
-    sudo apk upgrade
+sudo apk update
+sudo apk upgrade
 
 # add Samba
-    sudo apk add samba
+sudo apk add samba
         
         #start Samba and add to Startup
             systemctl enable smbd 
