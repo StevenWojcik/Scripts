@@ -1,29 +1,28 @@
 #! /bin/bash
 
-#Update System
+#   Update System and install Software
 apk update
 apk upgrade
-
-#install Git
 apk add git
- # sign in
-        git config --global user.name "StevenWojcik"
-        git config --global user.email "S.wojcik419@gmail.com"
-
-
-
-#Install nano and Curl
-apk add nano
+apk add nan
 apk add curl
-
-#Install Docker
+apk add wget
 apk add docker
 
-#Start Docker now + on startup
+#   Start new Sevices
+rc-server docker start
+
+#   Startup services | enable and add
 rc-service docker enable
-docker start
 rc-update add docker
 
-#Install Portainer 
-docker volume create portainer_data
-docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+#   Git
+#   sign in
+    git config --global user.name "StevenWojcik"
+    git config --global user.email "S.wojcik419@gmail.com"
+
+#   Docker
+#   Install Portainer 
+    docker volume create portainer_data
+    docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+
