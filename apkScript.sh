@@ -6,8 +6,8 @@
  apk add samba
         
         #start Samba and add to Startup
-            systemctl enable smbd 
-            systemctl startn smbd
+            rc-service  enable smbd 
+            rc-service enable  smbd
         # create smb user + password
             smbpasswd steven
 
