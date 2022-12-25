@@ -21,6 +21,7 @@ apk add docker
 
 #Start Docker now + on startup
 rc-service docker enable
+docker start
 rc-update add docker
 
 #Install Portainer 
