@@ -15,7 +15,7 @@
 # Remote Desktop
      apk add xrdp
     # add to startup
-    systemctl enable xrdp
+    rc-service enable xrdp
 
 # add Git
      apk add git
