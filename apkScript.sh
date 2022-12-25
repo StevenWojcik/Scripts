@@ -1,12 +1,9 @@
 #! /bin/bash
 
 
-# Run Update and Upgrade commands on system
-sudo apk update
-sudo apk upgrade
-
-# add Samba
-sudo apk add samba
+ apk update
+ apk upgrade
+ apk add samba
         
         #start Samba and add to Startup
             systemctl enable smbd 
@@ -16,13 +13,13 @@ sudo apk add samba
 
 
 # Remote Desktop
-    sudo apk add xrdp
+     apk add xrdp
     # add to startup
     systemctl enable xrdp
 
 # add Git
-    sudo apk add git
-    sudo apk add gh    
+     apk add git
+     apk add gh    
     
         # sign in
             git config --global user.name "StevenWojcik"
@@ -33,9 +30,9 @@ sudo apk add samba
 
 # System Status and Monitoring 
     sydo apk add qemu-guest-agent
-    sudo apk add neofetch
-    sudo apk add nano
-    sudo apk add htop
+     apk add neofetch
+     apk add nano
+     apk add htop
 
 
 # add "brew"
