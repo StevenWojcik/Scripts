@@ -1,11 +1,12 @@
 #! /bin/bash
 
-# Run Update and Upgrade commands on system
-    sudo apt update
-    sudo apt upgrade
 
-# Install Samba
-    sudo apt install samba
+# Run Update and Upgrade commands on system
+    sudo apk update
+    sudo apk upgrade
+
+# add Samba
+    sudo apk add samba
         
         #start Samba and add to Startup
             systemctl enable smbd 
@@ -15,13 +16,13 @@
 
 
 # Remote Desktop
-    sudo apt install xrdp
+    sudo apk add xrdp
     # add to startup
     systemctl enable xrdp
 
-# Install Git
-    sudo apt install git
-    sudo apt install gh    
+# add Git
+    sudo apk add git
+    sudo apk add gh    
     
         # sign in
             git config --global user.name "StevenWojcik"
@@ -31,14 +32,14 @@
 
 
 # System Status and Monitoring 
-    sydo apt install qemu-guest-agent
-    sudo apt install neofetch
-    sudo apt install nano
-    sudo apt install htop
+    sydo apk add qemu-guest-agent
+    sudo apk add neofetch
+    sudo apk add nano
+    sudo apk add htop
 
 
-# install "brew"
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# add "brew"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/add/HEAD/add.sh)"
 
 
 # add to systemctl services
