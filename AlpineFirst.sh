@@ -10,6 +10,9 @@
   apk add neofetch
   apk add tailscale
   apk add openssh
+  apk add nnn
+  apk add btop
+  
 
 #-Start new Sevices
   rc-service sshd start
