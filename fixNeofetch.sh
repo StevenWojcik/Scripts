@@ -1,11 +1,7 @@
 #! /bin/bash
 
 rm /home/steven/.config/neofetch/config.conf
-echo "# Source: https://github.com/Chick2D/neofetch-themes/
-# Made by https://github.com/tralph3 
-# Customization Wiki https://github.com/dylanaraps/neofetch/wiki/Customizing-Info
-
-# Colour config is here and in .zshrc
+cat <<EOF > config.conf
 
 print_info() {
     info title
@@ -126,4 +122,5 @@ gap=3
 yoffset=0
 xoffset=0
 background_color=
-stdout="off"" >>config.conf
+stdout="off" 
+EOF 
