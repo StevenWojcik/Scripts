@@ -5,7 +5,7 @@ echo "# Source: https://github.com/Chick2D/neofetch-themes/
 # Made by https://github.com/tralph3 
 # Customization Wiki https://github.com/dylanaraps/neofetch/wiki/Customizing-Info
 
-# Colour config is here and in .zshrc"
+# Colour config is here and in .zshrc
 
 print_info() {
     info title
