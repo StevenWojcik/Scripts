@@ -1,8 +1,6 @@
 #! /bin/bash
 
-cat << 'EOF' > /home/$USER/.config/neofetch/config.conf
-
-print_info() {
+echo "print_info() {
     info title
     info underline
 
@@ -121,5 +119,5 @@ gap=3
 yoffset=0
 xoffset=0
 background_color=
-stdout="off" 
-EOF 
+stdout="off"" > /home/$USER/.config/neofetch/config.conf
+
