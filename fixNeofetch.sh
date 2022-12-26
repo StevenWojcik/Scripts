@@ -1,7 +1,6 @@
 #! /bin/bash
 
-rm /home/steven/.config/neofetch/config.conf
-cat <<EOF > config.conf
+cat <<EOF > /home/$USER/.config/neofetch/config.conf
 
 print_info() {
     info title
