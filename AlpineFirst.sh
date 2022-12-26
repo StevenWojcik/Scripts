@@ -1,5 +1,6 @@
 #! /bin/bash
 #-Update System and install Software
+  echo "http://dl-cdn.alpinelinux.org/alpine/v3.16/community" >> /etc/apk/repositories
   apk update
   apk upgrade
   apk add git
@@ -13,11 +14,11 @@
   apk add nnn
   apk add btop
   
-
 #-Start new Sevices
   rc-service sshd start
   rc-service docker start
   rc-service tailscale start
+  /etc/init.d/sshd start     #start SSH server service
 
 #-Enable new services
   rc-service sshd enable
