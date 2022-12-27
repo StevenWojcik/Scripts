@@ -26,3 +26,21 @@ Linux(apk):
 ```
 sudo wget -O /home/$USER/.config/neofetch/config.conf https://raw.githubusercontent.com/StevenWojcik/Scripts/main/neofetch/talljoe.conf
 ```
+
+
+Script:
+
+    download script
+    ```
+    wget -O https://raw.githubusercontent.com/StevenWojcik/Scripts/main/neofetch/fixNeofetch.sh
+    ```
+
+    make executable
+    ```
+    chmod +x fixNeofetch.sh
+    ```
+
+    run
+    ```
+    ./fixneofetch.sh
+    ```
