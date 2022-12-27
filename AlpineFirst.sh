@@ -1,6 +1,13 @@
 #! /bin/bash
+
+#-Create User
+  echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/wheel
+  adduser steven wheel
+
 #-Update System and install Software
   echo "http://dl-cdn.alpinelinux.org/alpine/v3.16/community" >> /etc/apk/repositories
+
+  
   apk update
   apk upgrade
   apk add git
@@ -13,6 +20,7 @@
   apk add openssh
   apk add nnn
   apk add btop
+  apk add docker docker-cli-compose
   
 #-Start new Sevices
   rc-service sshd start
