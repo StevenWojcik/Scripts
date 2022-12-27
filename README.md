@@ -31,16 +31,19 @@ sudo wget -O /home/$USER/.config/neofetch/config.conf https://raw.githubusercont
 Script:
 
     download script
+
     ```
-    wget -O https://raw.githubusercontent.com/StevenWojcik/Scripts/main/neofetch/fixNeofetch.sh
+        wget -O https://raw.githubusercontent.com/StevenWojcik/Scripts/main/neofetch/fixNeofetch.sh
     ```
 
     make executable
+
     ```
-    chmod +x fixNeofetch.sh
+        chmod +x fixNeofetch.sh
     ```
 
     run
+    
     ```
-    ./fixneofetch.sh
+        ./fixneofetch.sh
     ```
