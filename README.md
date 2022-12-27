@@ -32,8 +32,10 @@ sudo wget -O /home/$USER/.config/neofetch/config.conf https://raw.githubusercont
 ### Script:
 
 
- download script
+ download script 
+ 
  make executable
+ 
  run
 
 ```
