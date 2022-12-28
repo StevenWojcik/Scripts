@@ -1,0 +1,67 @@
+---
+version: "2.1"
+services:
+#-Sonar
+  sonarr:
+    image: lscr.io/linuxserver/sonarr:latest
+    container_name: sonarr
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Europe/London
+    volumes:
+      - /home/Media/docker/sonarr/config:/config
+      - /home/Media/tv:/tv #optional
+      - /home/Media/docker/deluge/downloads:/downloads #optional
+    ports:
+      - 8989:8989
+    restart: unless-stopped
+#-Radarr  
+  radarr:
+
+    image: lscr.io/linuxserver/radarr:latest
+    container_name: radarr
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Europe/London
+    volumes:
+      - /home/Media/docker/radarr/data:/config
+      - /home/Media/Movies:/movies #optional
+      - /home/Media/docker/deluge/downloads:/downloads #optional
+    ports:
+      - 7878:7878
+
+    restart: unless-stopped
+#-Lidarr
+  lidarr:
+    container_name: lidarr
+    image: cr.hotio.dev/hotio/lidarr
+    ports:
+      - "8686:8686"
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - UMASK=002
+      - TZ=Etc/UTC
+    volumes:
+      - /home/Media/docker/lidarr/config:/config
+#-Deluge
+  deluge:
+    image: lscr.io/linuxserver/deluge:latest
+    container_name: deluge
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Europe/London
+      - DELUGE_LOGLEVEL=error #optional
+    volumes:
+      - /home/Media/docker/deluge/config:/config
+      - /home/Media/docker/deluge/downloads:/downloads
+      - /home/Media/Movies:/Movies
+    ports:
+      - 8112:8112
+      - 6881:6881
+      - 6881:6881/udp
+    restart: unless-stopped
+
