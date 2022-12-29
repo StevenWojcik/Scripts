@@ -1,8 +1,6 @@
 #! /bin/bash
 
-#-Create User
-  echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/wheel
-  adduser steven wheel
+
 
 #-Update System and install Software
   echo "http://dl-cdn.alpinelinux.org/alpine/v3.16/community" >> /etc/apk/repositories
@@ -42,6 +40,10 @@
   git config --global user.name "StevenWojcik"
   git config --global user.email "S.wojcik419@gmail.com"
 
+#-Create User
+  echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/wheel
+  adduser steven wheel
+  
 #-Install Portainer Agent
 docker run -d -p 9001:9001 --name portainer_agent --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v /var/lib/docker/volumes:/var/lib/docker/volumes portainer/agent:latest
 

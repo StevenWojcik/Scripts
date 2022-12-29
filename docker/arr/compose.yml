@@ -46,6 +46,8 @@ services:
       - TZ=Etc/UTC
     volumes:
       - /home/Media/docker/lidarr/config:/config
+      - /home/Media/docker/deluge/downloads:/downloads
+      - /home/Media/Music
 #-Deluge
   deluge:
     image: lscr.io/linuxserver/deluge:latest
@@ -59,6 +61,7 @@ services:
       - /home/Media/docker/deluge/config:/config
       - /home/Media/docker/deluge/downloads:/downloads
       - /home/Media/Movies:/Movies
+      - /home/Media/Tv:/Tv
     ports:
       - 8112:8112
       - 6881:6881
@@ -77,7 +80,7 @@ services:
      volumes:
        - /home/Media/docker/enby/config:/config # Configuration directory
        - /home/Media/Movies:/Movies # Media directory
-       - /home/Media/tv:/tv # Media directory
+       - /home/Media/Tv:/Tv # Media directory
      ports:
        - 8096:8096 # HTTP port
        - 8920:8920 # HTTPS port
