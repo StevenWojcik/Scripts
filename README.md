@@ -43,3 +43,7 @@ wget -O fixNeofetch.sh https://raw.githubusercontent.com/StevenWojcik/Scripts/ma
 chmod +x fixNeofetch.sh
 ./fixneofetch.sh
 ```
+
+# Docker
+
+## [Arrs](https://vscode.dev/github/StevenWojcik/Scripts/blob/c71ae3504d81dc54d668a0f6baeadc77d30d01b2/docker/arr)
