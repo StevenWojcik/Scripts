@@ -89,5 +89,20 @@ services:
        - /dev/dri:/dev/dri # VAAPI/NVDEC/NVENC render nodes
        - /dev/vchiq:/dev/vchiq # MMAL/OMX on Raspberry Pi
      restart: unless-stopped
-
+ #-Plex
+  plex:
+    image: lscr.io/linuxserver/plex:latest
+    container_name: plex
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - VERSION=docker
+      - PLEX_CLAIM= #optional
+    volumes:
+       - /home/Media/docker/plex/config:/config # Configuration directory
+       - /home/Media/Movies:/Movies # Media directory
+       - /home/Media/Tv:/Tv # Media directory
+       - /home/Media/Music:/Music
+    restart: unless-stopped
 

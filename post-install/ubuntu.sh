@@ -6,30 +6,30 @@
   echo "http://dl-cdn.alpinelinux.org/alpine/v3.16/community" >> /etc/apk/repositories
 
   
-  apk update
-  apk upgrade
-  apk add git
-  apk add nano
-  apk add curl
-  apk add wget
-  apk add docker
-  apk add neofetch
-  apk add tailscale
-  apk add openssh
-  apk add nnn
-  apk add btop
-  apk add docker docker-cli-compose
+  sudo apt update
+  sudo apt upgrade
+  sudo apt install git
+  sudo apt install nano
+  sudo apt install curl
+  sudo apt install wget
+  sudo apt install docker
+  sudo apt install neofetch
+  sudo apt install tailscale
+  sudo apt install openssh
+  sudo apt install nnn
+  sudo apt install btop
+  sudo apt install docker docker-cli-compose
   
 #-Start new Sevices
-  rc-service sshd start
-  rc-service docker start
-  rc-service tailscale start
+  sudo systemctl start sshd 
+  sudo systemctl start docker 
+  sudo systemctl start tailscale 
   /etc/init.d/sshd start     #start SSH server service
 
 #-Enable new services
-  rc-service sshd enable
-  rc-service docker enable
-  rc-service tailscale enable
+sudo systemctl enable sshd 
+sudo systemctl enable docker 
+sudo systemctl enable tailscale 
 
 #-Add new services
   rc-update add sshd

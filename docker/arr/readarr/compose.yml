@@ -13,5 +13,6 @@ services:
       - TZ=Etc/UTC
     volumes:
       - /home/Media/docker/readarr/config:/config
+      - /home/Media/docker/deluge/downloads:/downloads
       - /home/Media/Books:/Books
       - /home/Media/Books/Audiobooks:/Audiobooks
